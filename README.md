@@ -27,3 +27,15 @@ As a workaround copy a QtCore*.dll matching your compiler and architecture next 
 That one will be picked up first and make the ABI detection succeed. The Qt SDK should have a matching QtCore dll somewhere.
 
 3. Add static bild to project
+
+For build under linux:  
+----------------------
+
+1. install qt5-base qt5-doc qt5-serialport 
+2. cd src; qmake -project $(pwd)
+3. in file src.pro: 
+    - add "greaterThan(QT_MAJOR_VERSION, 4): QT += widgets serialport"
+4. qmake
+5. make
+
+
