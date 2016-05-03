@@ -1,0 +1,9 @@
+syntax: glob
+
+*.user
+.~*#
+debug
+release
+Makefile
+Makefile.*
+object_script.*
